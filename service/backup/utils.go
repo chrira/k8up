@@ -18,6 +18,7 @@ func newBackupJob(volumes []corev1.Volume, controllerName string, backup *backup
 		tmpMount := corev1.VolumeMount{
 			Name:      volume.Name,
 			MountPath: path.Join(config.dataPath, volume.Name),
+			ReadOnly:  true,
 		}
 		mounts = append(mounts, tmpMount)
 	}

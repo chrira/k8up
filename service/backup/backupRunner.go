@@ -127,7 +127,6 @@ func (b *backupRunner) listPVCs(annotation string) []corev1.Volume {
 			VolumeSource: corev1.VolumeSource{
 				PersistentVolumeClaim: &corev1.PersistentVolumeClaimVolumeSource{
 					ClaimName: item.Name,
-					ReadOnly:  true,
 				},
 			},
 		}
